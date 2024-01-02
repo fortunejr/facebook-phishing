@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Database</title>
+  </head>
+  <body>
+    <h1>Collected Information<h1>
+
+    
+    <table>
+        <tr>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        {% for x in users %}  
+        <tr>
+      
+          <td>{{ x.username }}</td>
+          <td>{{ x.password }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+  </body>
+</html>

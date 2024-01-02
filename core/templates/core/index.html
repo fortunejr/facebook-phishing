@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log in to Facebook.</title>
+    
+    
+    <link rel='stylesheet' href="{% static 'index.css'%}">
+    <link rel="icon" href="media/favicon.ico" type='image/x-icon'>
+  </head>
+  <body>
+    <div class="container flex">
+      <div class="facebook-page flex">
+        <div class="text">
+          <h1>facebook</h1>
+          <p>Connect with friends and the world </p>
+          <p> around you on Facebook.</p>
+        </div>
+
+        <form method='POST' action="submit/">
+          {% csrf_token %}
+          {{ form }}
+
+          <div class="link">
+            <button type="submit" class="login">Login</button>
+            <a href="#" class="forgot">Forgot password?</a>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
